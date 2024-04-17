@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+  
+} 
+
+body{
+
+    background-image: url("kwiatki.jpg");
+  
+   
+ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 450%;
+}
+
+
+#szary-pasek {
+    background-color: #85887b; /* Kolor szarego paska */
+    width: 80%; /* Szerokość paska */
+    height: 100%; /* Wysokość na całą wysokość okna */
+    position: absolute; /* Ustawienie pozycji absolutnej */
+    top: 0; /* Od góry */
+    left: 10%; /* Od lewej */
+    z-index: -1; /* Ustawienie indeksu warstwy, aby był pod innymi elementami */
+    opacity: 0.8;
+    border: 1px solid #92948f;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+::placeholder {
+    color: #999;
+}
+
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
