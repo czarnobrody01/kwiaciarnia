@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2024 at 09:59 PM
+-- Generation Time: Apr 17, 2024 at 10:06 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -40,7 +40,10 @@ CREATE TABLE `adres` (
 --
 
 INSERT INTO `adres` (`id_adres`, `kraj`, `miasto`, `ulica`, `numer`) VALUES
-(1, 'Polska', 'Dąbrowa Górnicza', 'Łazy Błędowskie', '29');
+(1, 'Polska', 'Dąbrowa Górnicza', 'Łazy Błędowskie', '29'),
+(2, 'Polska', 'Kraków', 'Miodowa', '25'),
+(3, 'Polska', 'Warszawa', 'Budowlana', '112'),
+(4, 'Niemcy', 'Monahium', 'Großestraße', '43');
 
 -- --------------------------------------------------------
 
@@ -130,15 +133,16 @@ CREATE TABLE `zamowienia` (
   `id_zamowienia` int(30) NOT NULL,
   `id_kwiatek` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_adres` int(30) NOT NULL
+  `id_adres` int(30) NOT NULL,
+  `ilosc_kwiatkow` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Dumping data for table `zamowienia`
 --
 
-INSERT INTO `zamowienia` (`id_zamowienia`, `id_kwiatek`, `id_user`, `id_adres`) VALUES
-(2, 1, 2, 1);
+INSERT INTO `zamowienia` (`id_zamowienia`, `id_kwiatek`, `id_user`, `id_adres`, `ilosc_kwiatkow`) VALUES
+(2, 1, 2, 1, 1);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -192,7 +196,7 @@ ALTER TABLE `zamowienia`
 -- AUTO_INCREMENT for table `adres`
 --
 ALTER TABLE `adres`
-  MODIFY `id_adres` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_adres` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `kwiatekcena`
