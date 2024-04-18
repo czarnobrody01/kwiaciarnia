@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>czuks</title>
     <link rel="stylesheet" href="styl.css">
+
 </head>
 <body>
 
@@ -23,16 +24,18 @@
 <img src="pepsi.jpg" alt="kwaitkii">
 
     <form method="post">
-    <input type="text" name="first_name" placeholder="podaj imie"><br>
+    <!-- <input type="text" name="first_name" placeholder="podaj imie"><br> 
     <input type="text" name="last_name" placeholder="podaj nazwisko"><br>
     <input type="text" name="email" placeholder="podaj email"><br>
-    <input type="password" name="haslo" placeholder="podaj haslo"><br>
-    <select name="walczuch" >
+    <input type="password" name="haslo" placeholder="podaj haslo"><br> -->
+    <input type="text" name="nazwakwiatek" placeholder="podaj nazwe szukanego kwiatka, np.: tulipan">
+    <!-- <select name="walczuch" >
         <option value="mezczyzna">meżczyzna</option>
         <option value="kobieta">kobieta</option>
         <option value="pietruszka">pietruszka</option>
-    </select>
+    </select> -->
     <input type="submit">
+
 </form>
 
 
@@ -48,11 +51,11 @@
 @$password = $_POST["haslo"];
 @$gender = $_POST["walczuch"];
 
+@$getinfo = $_POST['nazwakwiatek'];
 
-$servername = "localhost"; 
-$database = ""; 
-$dbpassword = ""; 
-$database = ""; 
+require 'bazy.php';
+
+
 
 
 
