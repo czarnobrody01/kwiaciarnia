@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>czuks</title>
+    <title>Kwiaciarnia</title>
     <link rel="stylesheet" href="styl.css">
 
 </head>
@@ -28,7 +28,12 @@
     <input type="text" name="last_name" placeholder="podaj nazwisko"><br>
     <input type="text" name="email" placeholder="podaj email"><br>
     <input type="password" name="haslo" placeholder="podaj haslo"><br> -->
-    <input type="text" name="nazwakwiatek" placeholder="podaj nazwe szukanego kwiatka, np.: tulipan">
+    <select name="wybierztabele">
+        <option value="adres">adres</option>
+        <!--<option value="zamowienia">zamowienia</option>-->
+
+    </select>
+    <input type="text" name="nazwakwiatek" placeholder="podaj id (1-25)">
     <!-- <select name="walczuch" >
         <option value="mezczyzna">meżczyzna</option>
         <option value="kobieta">kobieta</option>
@@ -37,6 +42,7 @@
     <input type="submit">
 
 </form>
+
 
 
 
@@ -51,7 +57,9 @@
 @$password = $_POST["haslo"];
 @$gender = $_POST["walczuch"];
 
+
 @$getinfo = $_POST['nazwakwiatek'];
+@$gettable = filter_input(INPUT_POST, 'wybierztabele');
 
 require 'bazy.php';
 
