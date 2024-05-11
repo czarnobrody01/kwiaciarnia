@@ -18,6 +18,311 @@ body{
 }
 
 
+
+  
+ /* Stylowanie kontenera */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Stylowanie nagłówka */
+header {
+    background-color: #fff;
+    padding: 30px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #333;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+
+/* Stylowanie treści głównej */
+.main-content {
+    text-align: center;
+    padding: 250px 0;
+}
+
+.main-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.main-content p {
+    font-size: 1.1em;
+}
+
+/* Stylowanie sekcji "O nas" */
+.about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1em;
+}
+.about img {
+    display: none;
+}
+
+
+/* Stylowanie sekcji "Oferta" */
+.services {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin-top: 40px;
+}
+
+.service-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-item img:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.service-item p {
+    font-size: 1.1em;
+}
+.product {
+    display: flex; /* Ustawienie elementów obok siebie */
+    align-items: center; /* Wyrównanie elementów do środka */
+    margin-bottom: 10px; /* Dodanie odstępu między produktami */
+}
+
+.product img {
+    width: 100px; /* Szerokość obrazka */
+    height: auto; /* Zachowanie proporcji */
+    margin-right: 10px; /* Dodanie odstępu po prawej stronie obrazka */
+}
+
+.price {
+    font-weight: bold; /* Wytłuszczenie ceny */
+}
+
+/* Stylowanie sekcji "Kontakt" */
+.contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact form button:hover {
+    background-color: #555;
+}
+
+/* Stylowanie stopki */
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-media {
+    list-style-type: none;
+}
+
+.social-media li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-media li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-media li a:hover {
+    text-decoration: underline;
+}
+.button {
+     background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+
+
+#szary-pasek {
+    background-color: #85887b; /* Kolor szarego paska */
+    width: 80%; /* Szerokość paska */
+    height: 100%; /* Wysokość na całą wysokość okna */
+    position: absolute; /* Ustawienie pozycji absolutnej */
+    top: 0; /* Od góry */
+    left: 10%; /* Od lewej */
+    z-index: -1; /* Ustawienie indeksu warstwy, aby był pod innymi elementami */
+    opacity: 0.8;
+    border: 1px solid #92948f;
+}
+/* Stylowanie dropdownu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Stylowanie przycisku */
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Stylowanie rozwijanej zawartości */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Stylowanie linków w rozwijanej zawartości */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Efekt hover na linkach */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Pokazanie rozwijanej zawartości po najechaniu na przycisk */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+::placeholder {
+    color: #999;
+}
+
+#navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+
 #szary-pasek {
     background-color: #85887b; /* Kolor szarego paska */
     width: 80%; /* Szerokość paska */
