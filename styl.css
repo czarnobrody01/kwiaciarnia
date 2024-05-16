@@ -1,11 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
   
 } 
-
 body{
 
     background-image: url("kwiatki.jpg");
@@ -14,12 +13,10 @@ body{
  
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% 450%;
+    background-size: 70% 80%
 }
 
 
-
-  
  /* Stylowanie kontenera */
 .container {
     width: 80%;
@@ -34,13 +31,27 @@ header {
     background-color: #fff;
     padding: 30px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   
+    
 }
+
+header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
 
 header h1 {
-    color: #333;
+    color: black(0, 0%, 100%);
     font-size: 2em;
 }
-
 nav ul {
     list-style-type: none;
 }
@@ -62,6 +73,8 @@ nav ul li a:hover {
 
 
 /* Stylowanie treści głównej */
+
+
 .main-content {
     text-align: center;
     padding: 250px 0;
@@ -77,6 +90,9 @@ nav ul li a:hover {
 }
 
 /* Stylowanie sekcji "O nas" */
+
+
+
 .about {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -96,6 +112,9 @@ nav ul li a:hover {
 
 
 /* Stylowanie sekcji "Oferta" */
+
+
+
 .services {
     background-color: #fff;
     padding: 50px 0;
@@ -147,6 +166,8 @@ nav ul li a:hover {
 }
 
 /* Stylowanie sekcji "Kontakt" */
+
+
 .contact {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -273,66 +294,6 @@ footer {
 /* Pokazanie rozwijanej zawartości po najechaniu na przycisk */
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-
-
-
-input[type="text"],
-input[type="password"],
-select {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-
-input[type="submit"] {
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-
-::placeholder {
-    color: #999;
-}
-
-#navbar {
-    background-color: #333; /* Black background color */
-    position: fixed; /* Make it stick/fixed */
-    top: -50px; /* Hide the navbar 50 px outside of the top view */
-    width: 100%; /* Full width */
-    transition: top 0.3s; /* Transition effect when sliding down (and up) */
-  }
-
-#szary-pasek {
-    background-color: #85887b; /* Kolor szarego paska */
-    width: 80%; /* Szerokość paska */
-    height: 100%; /* Wysokość na całą wysokość okna */
-    position: absolute; /* Ustawienie pozycji absolutnej */
-    top: 0; /* Od góry */
-    left: 10%; /* Od lewej */
-    z-index: -1; /* Ustawienie indeksu warstwy, aby był pod innymi elementami */
-    opacity: 0.8;
-    border: 1px solid #92948f;
 }
 
 form {
