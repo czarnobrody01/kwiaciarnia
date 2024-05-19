@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Maj 02, 2024 at 03:04 PM
+-- Generation Time: Maj 19, 2024 at 07:35 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -198,6 +198,29 @@ INSERT INTO `opinie` (`id_opinia`, `id_zamowienie`, `opinia`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `test`
+--
+
+CREATE TABLE `test` (
+  `id123` int(234) NOT NULL,
+  `nazwa` varchar(11) NOT NULL,
+  `liczba` varchar(11) NOT NULL,
+  `user` varchar(11) NOT NULL,
+  `adres` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `test`
+--
+
+INSERT INTO `test` (`id123`, `nazwa`, `liczba`, `user`, `adres`) VALUES
+(48, '25', '3', '25', '25'),
+(49, '20', '69', '9', '6'),
+(50, '18', '69', '20', '18');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `users`
 --
 
@@ -282,7 +305,8 @@ INSERT INTO `zamowienia` (`id_zamowienia`, `id_kwiatek`, `id_user`, `id_adres`, 
 (22, 13, 8, 1, 3),
 (23, 2, 17, 2, 4),
 (24, 9, 22, 6, 6),
-(25, 7, 14, 25, 3);
+(25, 7, 14, 25, 3),
+(28, 25, 25, 25, 26);
 
 --
 -- Indeksy dla zrzutów tabel
@@ -312,6 +336,12 @@ ALTER TABLE `kwiatekopis`
 ALTER TABLE `opinie`
   ADD PRIMARY KEY (`id_opinia`),
   ADD KEY `id_zamowienieopinie` (`id_zamowienie`);
+
+--
+-- Indeksy dla tabeli `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`id123`);
 
 --
 -- Indeksy dla tabeli `users`
@@ -357,6 +387,12 @@ ALTER TABLE `opinie`
   MODIFY `id_opinia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `id123` int(234) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
@@ -366,7 +402,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `zamowienia`
 --
 ALTER TABLE `zamowienia`
-  MODIFY `id_zamowienia` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_zamowienia` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Constraints for dumped tables
