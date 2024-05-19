@@ -1,76 +1,129 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
-  
-} 
-body{
-
-    background-image: url("kwiatki.jpg");
-  
-   
- 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 70% 80%
+    box-sizing: border-box;
 }
 
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
- /* Stylowanie kontenera */
 .container {
     width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: auto;
+    overflow: hidden;
 }
 
-
-/* Stylowanie nagłówka */
+/* Header Styles */
 header {
-    background-color: #fff;
-    padding: 30px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   
-    
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77b300 3px solid;
 }
-
-header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-
-
 
 header h1 {
-    color: black(0, 0%, 100%);
-    font-size: 2em;
-}
-nav ul {
-    list-style-type: none;
+    float: left;
+    margin-top: 0;
 }
 
-nav ul li {
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 10px;
 }
 
-nav ul li a {
+header ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #555;
     font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #333;
+/* Hero Section */
+.hero {
+    background: url('img/hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.hero h2 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Offer Section */
+.offer {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.offer h2 {
+    margin-bottom: 40px;
+}
+
+.offer-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.offer-item {
+    background: #fff;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.offer-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.offer-item h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #77b300;
+    text-decoration: none;
 
 /* Stylowanie treści głównej */
 
