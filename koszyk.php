@@ -12,14 +12,14 @@
 
 <header>
     <div class="container">
-        <h1>Kwiaciarnia Pod Słońcem</h1>
+        <h1>Kwiaciarnia Pod Słońcem</h1><br><br>
 <div>
     <a class="button" href="strona.html">Strona główna</a>
     <a class="button" href="news.html">O nas</a>
     <a class="button" href="contact.html">Kontakt</a>
     
     <div class="dropdown">
-        <button class="button">oferta</button>
+        <button class="button">Oferta</button>
         <div class="dropdown-content">
             <a href="oferta.html">bukiety róż</a>
             <a href="bukiet.html">bukiety mieszane</a>
@@ -35,8 +35,38 @@
 <script>
 
 
-function oblicz(cena){
+function oblicz(){
 
+var kiwatek = document.getElementById('kwiat').value;
+cena = 0
+switch (Number(kiwatek)) {
+  case 1: var cena = 26; break;
+  case 2: var cena = 19; break;
+  case 3: cena = 30; break;
+  case 4: cena = 16; break;
+  case 5: cena = 22; break;
+  case 6: cena = 28; break;
+  case 7: cena = 36; break;
+  case 8: cena = 28; break;
+  case 9: cena = 20; break;
+  case 10: cena = 25; break;
+  case 11: cena = 33; break;
+  case 12: cena = 21; break;
+  case 13: cena = 18; break;
+  case 14: cena = 30; break;
+  case 15: cena = 26; break;
+  case 16: cena = 24; break;
+  case 17: cena = 32; break;
+  case 18: cena = 21; break;
+  case 19: cena = 34; break;
+  case 20: cena = 17; break;
+  case 21: cena = 34; break;
+  case 22: cena = 27; break;
+  case 23: cena = 18; break;
+  case 24: cena = 29; break;
+  case 25: cena = 23; break;
+}
+console.log(kiwatek, cena)
 var p = document.getElementById('wynik').innerHTML = "Cena wynosi: "+document.getElementById('liczba').value*cena+" + cena za dostawe: "+5+"zł"
 
 }
@@ -105,8 +135,8 @@ if ($result3->num_rows > 0) {
     }
 }
 echo "</select><br>";
-echo "Liczba: <input type='number' id='liczba' name='liczba'><br>";
-echo "<input type='button' onclick='oblicz(2)' value='Oblicz cenę(na razie mnozy tylko razy dwa)'>";
+echo "Liczba: <input type='number' value='1' id='liczba' name='liczba'><br>";
+echo "<input type='button' onclick='oblicz(2)' class='zoom' value='Oblicz cenę'>";
 echo "<p id='wynik'><p>";
 echo "<input type='submit' value='Złoż zamowienie'>";
 echo "</form>";
@@ -119,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $liczba = $_POST['liczba'];
 
     // Wstawienie danych do bazy danych
-    $polecenie1 = "INSERT INTO test (nazwa, liczba, user, adres) VALUES ('$kwiat', '$liczba', '$user', '$adres')";
+    $polecenie1 = "INSERT INTO zamowienia (id_kwiatek, id_user, id_adres, ilosc_kwiatkow) VALUES ('$kwiat', '$user', '$adres', '$liczba')";
 
     if ($conn->query($polecenie1) === TRUE) {
         echo "Dane zostały pomyślnie dodane do bazy danych.";
